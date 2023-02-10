@@ -88,7 +88,7 @@ public class PostController {
     @ResponseStatus(HttpStatus.OK)
     public Response searchPost(String keyword,
                                @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
-        // ex) http://localhost:8080/api/boards/search?page=0
+        // http://localhost:8080/api/boards/search?page=0
         return Response.success(postService.searchPost(keyword, pageable));
     }
 
